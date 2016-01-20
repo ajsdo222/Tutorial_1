@@ -1,11 +1,11 @@
-const int LED = 13;  
-const int LED2 = 1;
+const int LED = 13;  //LED assigned slot 13
+const int LED2 = 1;  //LED assigned slot 1
   
 const int BUTTON = 6;  
 
 int val = 0;                
 
-int rate = 1000;
+int rate = 1000; // delay rate
 
  // 0 = LED off and 1 = LED on
  
@@ -18,19 +18,19 @@ void setup()
  }
 void loop()
 { 
-  val = digitalRead(BUTTON); 
+  val = digitalRead(BUTTON); // Stores the value from button
 
-  if (val == HIGH)
+  if (val == HIGH) // If the button is pressed,
   {
-    rate = rate - 20;
+    rate = rate - 20; // decrease the value by 20.
   }
   
-  digitalWrite(LED, HIGH);
+  digitalWrite(LED, HIGH);// turn LED ON 
   delay(rate);
-  digitalWrite(LED, LOW);
+  digitalWrite(LED, LOW); // turn LED OFF 
   delay(rate);
   digitalWrite(LED2, HIGH);// turn LED ON 
   delay(rate);
-  digitalWrite(LED2, LOW);
+  digitalWrite(LED2, LOW); // turn LED OFF
 }
   
