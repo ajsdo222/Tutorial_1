@@ -11,7 +11,7 @@ void setup()
 
 void loop()
 {
-    val = digitalRead(Button);
+    val = digitalRead(Button); // variable that stores the value
     
     if(val==HIGH) // If button is pressed
     {
