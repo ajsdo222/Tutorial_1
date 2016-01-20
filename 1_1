@@ -1,4 +1,4 @@
-# Tutorial_1
+
 const int LED = 13;// LED connected to                    // digital pin 13
 
 void setup() 
