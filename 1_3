@@ -1,0 +1,36 @@
+const int LED = 13;  
+const int LED2 = 1;
+  
+const int BUTTON = 6;  
+
+int val = 0;                
+
+int rate = 1000;
+
+ // 0 = LED off and 1 = LED on
+ 
+void setup() 
+{
+  pinMode(LED, OUTPUT);
+  pinMode(LED2, OUTPUT); 
+  // tell Arduino LED is an output 
+ pinMode(BUTTON, INPUT); // and BUTTON is an input
+ }
+void loop()
+{ 
+  val = digitalRead(BUTTON); 
+
+  if (val == HIGH)
+  {
+    rate = rate - 20;
+  }
+  
+  digitalWrite(LED, HIGH);
+  delay(rate);
+  digitalWrite(LED, LOW);
+  delay(rate);
+  digitalWrite(LED2, HIGH);// turn LED ON 
+  delay(rate);
+  digitalWrite(LED2, LOW);
+}
+  
