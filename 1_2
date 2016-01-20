@@ -1,24 +1,24 @@
-const int LED = 13;
-const int Button = 7;
+const int LED = 13; // Pin for the LED
+const int Button = 7; // Button slot
 
 int val = 0 ;
 
 void setup()
 {
-    pinMode(LED, OUTPUT);
-    pinMode(Button, INPUT);
+    pinMode(LED, OUTPUT); //Tell Arduino that LED is output
+    pinMode(Button, INPUT); //and button is input.
 }
 
 void loop()
 {
     val = digitalRead(Button);
     
-    if(val==HIGH)
+    if(val==HIGH) // If button is pressed
     {
-      digitalWrite(LED, HIGH);
+      digitalWrite(LED, HIGH); // Turn on LED
     }
-    else 
+    else  //If not,
     {
-      digitalWrite(LED,LOW);
+      digitalWrite(LED,LOW); // Turn off LED
     }
 }
